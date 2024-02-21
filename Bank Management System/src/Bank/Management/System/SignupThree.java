@@ -212,10 +212,16 @@ public class SignupThree extends JFrame implements ActionListener{
 
             }catch (Exception e){
                 System.out.println(e);
+            }finally {
+                try {
+                    Conn conn = new Conn();
+                    conn.s.close();
+                }catch (Exception e){
+                    System.out.println(e);
+
+                }
+
             }
-
-
-
 
         }else if(ae.getSource() == cancel){
             setVisible(false);

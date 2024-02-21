@@ -107,8 +107,17 @@ public class FastCash extends JFrame implements ActionListener{
                 setVisible(false);
                 new Transactions(pinnumber).setVisible(true);
                 
-                  } catch (Exception e) {
+            } catch (Exception e) {
+                System.out.println(e);
                 
+            }finally {
+                try {
+                    conn.s.close();
+                }catch (Exception e){
+                    System.out.println(e);
+
+                }
+
             }
         }
 

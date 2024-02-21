@@ -48,7 +48,7 @@ public class MiniStatement extends JFrame{
         try {
             Conn conn = new Conn();
             int bal = 0;
-            ResultSet rs = conn.s.executeQuery("select* from bank where pin = '"+pinnumber+"' order by date desc limit 10");
+            ResultSet rs = conn.s.executeQuery("select* from bank where pin = '"+pinnumber+"' order by _ROWID_ desc limit 10");
             while(rs.next()){
                 mini.setText(mini.getText()+"<html>"+rs.getString("date")+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rs.getString("type")+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rs.getString("amount")+"<br><br><html>");
                 if(rs.getString("type").equals("Deposit")){

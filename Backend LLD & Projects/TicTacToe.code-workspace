@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "TicTacToe"
+		},
+		{
+			"name": "tictactoe",
+			"path": "TicTacToe/tictactoe"
+		},
+		{
+			"name": "tictactoe-1",
+			"path": "tictactoe-1"
+		}
+	],
+	"settings": {}
+}

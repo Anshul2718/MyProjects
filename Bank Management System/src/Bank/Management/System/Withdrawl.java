@@ -93,6 +93,15 @@ public class Withdrawl extends JFrame implements ActionListener{
                     new Transactions(pinnumber).setVisible(true);
                 } catch (Exception e) {
                     System.out.println(e);
+                }finally {
+                    try {
+                        Conn conn = new Conn();
+                        conn.s.close();
+                    }catch (Exception e){
+                        System.out.println(e);
+
+                    }
+
                 }
             }
 

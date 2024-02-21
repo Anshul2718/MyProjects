@@ -6,6 +6,7 @@ import java.awt.event.*;
 import java.sql.*;
 
 
+
 public class Login extends JFrame implements ActionListener {
 
     JButton login, signup, clear;
@@ -98,6 +99,12 @@ public class Login extends JFrame implements ActionListener {
             } catch (Exception e) {
 
                 System.out.println(e);
+            }finally {
+                try {
+                    conn.s.close();
+                } catch (Exception e) {
+
+                }
             }
 
         }
